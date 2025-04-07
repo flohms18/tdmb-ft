@@ -1,32 +1,36 @@
 <template>
     <div>
       <h1>Enter the name of your favorite movie!</h1>
-      {{ james }}
+      <input placeholder="Enter the name of our favorite movie!" v-model="UserMovie">
+      <button @click="RequestMovie">OK</button>
+      <p> {{  SavedMovie }}</p>
     </div>
 
   </template>
   
   <script>
 
-  import axios from 'axios';
+import axios from 'axios';
 
 export default {
     name: 'Test',
+    data() {
+        return {
+            UserMovie : '',
+            SavedMovie : ''
+        }
+
+    },
     methods : {
-        GoTom() {
-            console.log("James Bond!")
+        RequestMovie() {
+            this.SavedMovie= this.UserMovie
         }
     },
     mounted() {
-        this.GoTom()
-    },
-
-    data() {
-        return {
-            james : 'Me Voilà!'
-        }
-
+        
     }
+
+    
 
 }
 
