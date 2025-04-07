@@ -1,6 +1,6 @@
 <script setup>
 
-import Test from './components/test.vue';
+import Test from './components/Test.vue';
 
 
 

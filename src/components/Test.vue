@@ -1,11 +1,27 @@
 <template>
     <div>
-        <h6>This is our TMDB Component</h6>
+      <h1>Enter the name of your favorite movie!</h1> 
     </div>
-</template>
 
-<script>
+  </template>
+  
+  <script>
+
 export default {
-    name : 'Test'
+    name: 'Test',
+    methods : {
+        GoTom() {
+            console.log("James Bond!")
+        }
+    },
+    mounted() {
+        this.GoTom()
+    }
+
 }
-</script>
+
+  
+
+  
+  </script>
+  
