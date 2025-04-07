@@ -1,11 +1,14 @@
 <template>
     <div>
-      <h1>Enter the name of your favorite movie!</h1> 
+      <h1>Enter the name of your favorite movie!</h1>
+      {{ james }}
     </div>
 
   </template>
   
   <script>
+
+  import axios from 'axios';
 
 export default {
     name: 'Test',
@@ -16,6 +19,13 @@ export default {
     },
     mounted() {
         this.GoTom()
+    },
+
+    data() {
+        return {
+            james : 'Me Voilà!'
+        }
+
     }
 
 }
